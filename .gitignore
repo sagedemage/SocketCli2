@@ -1,0 +1,7 @@
+zig-cache 
+zig-out
+
+# Production directory
+*/prod/*
+!*/prod/build.sh
+!*/prod/player.bmp
