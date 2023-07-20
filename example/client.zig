@@ -7,7 +7,6 @@ pub fn main() !void {
     defer _ = gpa.allocator();
     const allocator = gpa.allocator();
 
-    // Command Line Arguments
     const args = try std.process.argsAlloc(allocator);
     defer std.process.argsFree(allocator, args);
 
@@ -34,7 +33,6 @@ pub fn main() !void {
         1 => {
             const stdin = std.io.getStdIn();
 
-            // Get user input
             std.debug.print("Enter your message here: ", .{});
             const input = try stdin.reader().readUntilDelimiterAlloc(allocator, '\n', 1024);
             defer allocator.free(input);
