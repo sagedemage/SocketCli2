@@ -22,8 +22,8 @@ pub fn main() !void {
         2 => {
             const arg: u8 = args[1][0];
             if (arg == 'd') {
-                const client_msg: []const u8 = "Hello";
-                _ = try send_message_to_server(client_msg);
+                const default_msg: []const u8 = "Hello";
+                _ = try send_message_to_server(default_msg);
             } else if (arg == 'i') {
                 std.debug.print("Missing input value!\n", .{});
             } else {
