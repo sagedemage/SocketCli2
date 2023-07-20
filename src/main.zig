@@ -13,7 +13,7 @@ pub fn main() !void {
     // Print the listener address of the server
     std.debug.print("Server is running!\n", .{});
     std.debug.print("---------------------------\n", .{});
-    std.debug.print("Listening at {any}\n", .{server.listen_address});
+    std.debug.print("Listening at {s}\n", .{server.listen_address});
     std.debug.print("---------------------------\n", .{});
 
     while (true) {
