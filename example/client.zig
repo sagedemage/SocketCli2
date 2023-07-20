@@ -23,7 +23,6 @@ pub fn main() !void {
         2 => {
             const arg: u8 = args[1][0];
             if (arg == 'd') {
-                // send message to server
                 const client_msg: []const u8 = "Hello";
                 _ = try send_message_to_server(client_msg);
             } else if (arg == 'i') {
@@ -49,7 +48,7 @@ pub fn main() !void {
 }
 
 fn send_message_to_server(msg: []const u8) !void {
-    // Send a message to the server
+    // The client sends a message to the server
     const server_address = std.net.Address.initIp4([4]u8{ 127, 0, 0, 1 }, 8080);
 
     // Connect to the server
